@@ -1,0 +1,47 @@
+variable,model,label
+b_Intercept,beta,Intercept
+b_zi_Intercept,zero-inflated,Intercept
+b_scalenokken_poole_dim1,beta,Ideology (DW Nominate 1)
+b_scalenokken_poole_dim2,beta,Ideology (DW Nominate 2)
+b_scalenet_trump_vote,beta,Net Trump vote
+b_scalemargin_pc,beta,Margin of victory
+b_genderM,beta,Gender
+b_scaleage,beta,Age
+b_typeSEN,beta,Senator
+b_scalecases_norm_l1,beta,Cases
+b_scaledeaths_norm_l1,beta,Deaths
+b_mask_mandate,beta,State mask mandate
+b_scaledpres,beta,Clinton vote share
+b_scalemedianIncomeE,beta,Median income
+b_scaleage65_prop,beta,Proportion over 65
+b_scaleVery.low.density,beta,Population density 
+b_scalefollowers,beta,Followers
+b_republican,beta,Republican
+b_independent,beta,Independent
+b_zi_scalenokken_poole_dim1,zero-inflated,Ideology (DW Nominate 1)
+b_zi_scalenokken_poole_dim2,zero-inflated,Ideology (DW Nominate 2)
+b_zi_scalenet_trump_vote,zero-inflated,Net Trump vote
+b_zi_scalemargin_pc,zero-inflated,Margin of victory
+b_zi_genderM,zero-inflated,Gender
+b_zi_scaleage,zero-inflated,Age
+b_zi_typeSEN,zero-inflated,Senator
+b_zi_scalecases_norm_l1,zero-inflated,Cases
+b_zi_scaledeaths_norm_l1,zero-inflated,Deaths
+b_zi_mask_mandate,zero-inflated,State mask mandate
+b_zi_scaledpres,zero-inflated,Clinton vote share
+b_zi_scalemedianIncomeE,zero-inflated,Median income
+b_zi_scaleage65_prop,zero-inflated,Proportion over 65
+b_zi_scaleVery.low.density,zero-inflated,Population density 
+b_zi_scalefollowers,zero-inflated,Followers
+b_zi_republican,zero-inflated,Republican
+b_zi_independent,zero-inflated,Independent
+"r_yr_wk[2020_13,Intercept]",beta,CDC (offset)
+"r_yr_wk__zi[2020_13,Intercept]",zero-inflated,CDC (offset)
+"r_yr_wk[2020_21,Intercept]",beta,Biden mask (offset)
+"r_yr_wk__zi[2020_21,Intercept]",zero-inflated,Biden mask (offset)
+"r_yr_wk[2020_28,Intercept]",beta,Trump mask (offset)
+"r_yr_wk__zi[2020_28,Intercept]",zero-inflated,Trump mask (offset)
+"r_yr_wk[2020_44,Intercept]",beta,Election (offset)
+"r_yr_wk__zi[2020_44,Intercept]",zero-inflated,Election (offset)
+"r_yr_wk[2021_3,Intercept]",beta,Inauguration (offset)
+"r_yr_wk__zi[2021_3,Intercept]",zero-inflated,Inauguration (offset)
