@@ -79,4 +79,8 @@ cmdstanr::install_cmdstan(version = "v2.30.1")
 
 ### ``renv``
 
-This project uses the ``renv`` library to ensure that you are using the same versions of the various ``R`` libraries used in the original analysis. To initalize ``renv``, launch ``R`` in the terminal from the root directory of the  repository, which will load the project environment. You 
+This project uses the ``renv`` library to ensure that you are using the same versions of the various ``R`` libraries used in the original analysis. To initalize ``renv``, launch ``R`` in the terminal from the root directory of the repository, which will load the project environment. Next, restore the project library from the lockfile:
+
+```
+renv::restore()
+```
