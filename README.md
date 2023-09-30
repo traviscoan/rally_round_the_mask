@@ -65,7 +65,7 @@ Ubuntu users can follow the very helpful guide available [here] (https://fortran
 
 ### ``cmdstanr`` and ``CmdStan``
 
-To speed up model fitting, our analysis uses``cmdstanr`` 0.5.3 and ``CmdStan`` 2.30.1. You will need to install these libraries to replicate the analysis in the paper. First, install ``cmdstanr`` 0.5.3. You can download version 0.5.3 from the ``stan-dev`` GitHub repo [here](https://github.com/stan-dev/cmdstanr/archive/refs/tags/v0.5.3.tar.gzfrom), which we've also included in this repository for convenience (`cmdstanr-0.5.3.tar.gz`). Assuming that you've already changed the current working directory to the root for this repository (e.g., `cd absolute/path/on/your/system/rally_round_the_flag`), you can then install ``cmdstanr`` from source using:
+To speed up model fitting, our analysis uses``cmdstanr`` 0.5.3 and ``CmdStan`` 2.30.1. You will need to install these libraries to replicate the analysis in the paper. First, install ``cmdstanr`` 0.5.3. You can download version 0.5.3 from the ``stan-dev`` GitHub repo [here](https://github.com/stan-dev/cmdstanr/archive/refs/tags/v0.5.3.tar.gz), which we've also included in this repository for convenience (`cmdstanr-0.5.3.tar.gz`). Assuming that you've already changed the current working directory to the root for this repository (e.g., `cd absolute/path/on/your/system/rally_round_the_flag`), you can then install ``cmdstanr`` from source using:
 
 ```
 install.packages('cmdstanr-0.5.3.tar.gz', repos=NULL, type='source')
@@ -79,4 +79,4 @@ cmdstanr::install_cmdstan(version = "v2.30.1")
 
 ### ``renv``
 
-This project uses the ``renv`` library to ensure that you are using the same versions of the various ``R`` libraries used in the original analysis. 
+This project uses the ``renv`` library to ensure that you are using the same versions of the various ``R`` libraries used in the original analysis. To initalize ``renv``, launch ``R`` in the terminal from the root directory of the  repository, which will load the project environment. You 
