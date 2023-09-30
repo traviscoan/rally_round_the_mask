@@ -99,3 +99,5 @@ source('./scripts/appendix_E_combined_table1-4.R')
 ```
 
 After the script finishes, you can find the model results for each table in the `/tables` directory. For instance, running the `appendix_E_combined_table1-4.R` produces the following CSV files in `/tables`: `appendix_E_table1.csv`, `appendix_E_table2.csv`, `appendix_E_table3.csv`, `appendix_E_table4.csv`.
+
+**Note**: You might recieve deprecation warning related to std::sprintf when compiling Stan for the first time. You can safetly ignore this, as it's just saying that one of the functions used by the Boost c++ library has been marked as deprecated.
