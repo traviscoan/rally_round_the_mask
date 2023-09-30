@@ -142,7 +142,7 @@ estimates_zi_offsets$label <- factor(
   )
 
 estimates_beta_offsets$label <- factor(
-  estimates_beta_offset$label,
+  estimates_beta_offsets$label,
   levels = order_of_offsets
   )
 
