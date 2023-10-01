@@ -61,7 +61,7 @@ Note that your version of gcc may be different (mine is 13.2.0).
 
 #### Linux
 
-Ubuntu users can follow the very helpful guide available [here] (https://fortran-lang.org/learn/os_setup/install_gfortran/).
+Ubuntu users can follow the very helpful guide available [here](https://fortran-lang.org/learn/os_setup/install_gfortran/).
 
 ### ``renv``
 
