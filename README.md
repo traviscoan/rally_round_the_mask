@@ -4,7 +4,7 @@
 
 ### Version of ``R`` 
 
-The original analysis presented in the paper used R 4.2.2. If you are using a newer version of ``R``, you will need to install R 4.2.2 for this code to work out-of-the-box.
+The original analysis presented in the paper used ``R`` 4.2.2. While we provide instructions below on how to download and install ``R`` 4.2.2. on Mac and Ubuntu, newer versions of ``R`` should also work (**note**: we were able to the analysis described belwo using ``R`` 4.3.1).
 
 #### Mac OSX
 
@@ -73,7 +73,7 @@ renv::restore()
 
 ### ``cmdstanr`` and ``CmdStan``
 
-To speed up model fitting, our analysis uses``cmdstanr`` 0.5.3 and ``CmdStan`` 2.30.1. You will need to install these libraries to replicate the analysis in the paper. First, install ``cmdstanr`` 0.5.3. You can download version 0.5.3 from the ``stan-dev`` GitHub repo [here](https://github.com/stan-dev/cmdstanr/archive/refs/tags/v0.5.3.tar.gz), which we've also included in this repository for convenience (`cmdstanr-0.5.3.tar.gz`). Assuming that you've already changed the current working directory to the root for this repository (e.g., `cd absolute/path/on/your/system/rally_round_the_flag`), you can then install ``cmdstanr`` from source using:
+To speed up model fitting, our analysis uses``cmdstanr`` 0.5.3 and ``CmdStan`` 2.30.1. You will need to install these libraries and versions to replicate the analysis in the paper. First, install ``cmdstanr`` 0.5.3. You can download version 0.5.3 from the ``stan-dev`` GitHub repo [here](https://github.com/stan-dev/cmdstanr/archive/refs/tags/v0.5.3.tar.gz), which we've also included in this repository for convenience (`cmdstanr-0.5.3.tar.gz`). Assuming that you've already changed the current working directory to the root for this repository (e.g., `cd absolute/path/on/your/system/rally_round_the_flag`), you can then install ``cmdstanr`` from source using:
 
 ```
 # Get cmdstanr v0.5.3 directly from stan-dev using curl. You can also skip this step and install from the version included with the repository.
@@ -101,6 +101,10 @@ source('./scripts/appendix_E_combined_table1-4.R')
 After the script finishes, you can find the model results for each table in the `/tables` directory. For instance, running the `appendix_E_combined_table1-4.R` produces the following CSV files in `/tables`: `appendix_E_table1.csv`, `appendix_E_table2.csv`, `appendix_E_table3.csv`, `appendix_E_table4.csv`.
 
 **Note**: You might recieve deprecation warning related to std::sprintf when compiling Stan for the first time. You can safetly ignore this, as it's just saying that one of the functions used by the Boost c++ library has been marked as deprecated.
+
+### Note on setting the random seed
+
+Despite setting a random seed (in our ``R`` session and passing a ``seed`` to the ``brm`` function) and following suggestions to facilitate reproduceability when fitting threaded models via ``brms`` (e.g., estimating a single chain, setting the ``static`` argument to true in the ``threading()`` function), there will still be some randomness across runs due to multi-threading. As such, your results may differ slightly from the those presented in the paper.
 
 ### Sourcing scripts in the order presented in the paper
 
