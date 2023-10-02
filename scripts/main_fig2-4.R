@@ -1,3 +1,5 @@
+# Replication file for Figures 2-4 presented in Boussalis, Coan, Holman (2023)
+
 library(ggplot2)
 library(dplyr)
 library(cowplot)
