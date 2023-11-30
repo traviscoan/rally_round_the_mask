@@ -49,8 +49,8 @@ bprior <- c(
 
 # Instantiate formula for brms
 bformula <- bf(
-  mask_prop_rescale ~ 1 + scale(nokken_poole_dim1) +  scale(nokken_poole_dim2) + scale(net_trump_vote) + scale(margin_pc) + gender + scale(age) + type + scale(cases_norm_l1) + scale(deaths_norm_l1) + mask_mandate + scale(dpres) + scale(medianIncomeE) + scale(age65_prop) + scale(Very.low.density) + scale(followers) + republican + independent + (1|bioguide) + (1|yr_wk),
-  zi ~ 1 + scale(nokken_poole_dim1) +  scale(nokken_poole_dim2) + scale(net_trump_vote) + scale(margin_pc) + gender + scale(age) + type + scale(cases_norm_l1) + scale(deaths_norm_l1) + mask_mandate + scale(dpres) + scale(medianIncomeE) + scale(age65_prop) + scale(Very.low.density) + scale(followers) + republican + independent + (1|bioguide) + (1|yr_wk)
+  mask_prop_rescale ~ 1 + scale(nokken_poole_dim1) +  scale(nokken_poole_dim2) + scale(net_trump_vote) + scale(margin_pc) + gender + scale(age) + type + scale(cases_norm_l1) + scale(deaths_norm_l1) + mask_mandate + scale(dpres) + scale(medianIncomeE) + scale(age65_prop) + scale(Very.low.density) + scale(followers) + (1|bioguide) + (1|yr_wk),
+  zi ~ 1 + scale(nokken_poole_dim1) +  scale(nokken_poole_dim2) + scale(net_trump_vote) + scale(margin_pc) + gender + scale(age) + type + scale(cases_norm_l1) + scale(deaths_norm_l1) + mask_mandate + scale(dpres) + scale(medianIncomeE) + scale(age65_prop) + scale(Very.low.density) + scale(followers) + (1|bioguide) + (1|yr_wk)
 )
 
 # Fit zero-inflated beta for members of the House
@@ -86,7 +86,7 @@ idx_elect <- grep(week_elect, estimates[[1]])
 
 # Extract fixed factors, random effects for key events, and save
 # data frame.
-idx <- c(rep(1:36), idx_cdc, idx_biden, idx_trump, idx_elect)
+idx <- c(rep(1:34), idx_cdc, idx_biden, idx_trump, idx_elect)
 estimates_dem <- estimates[idx, ]
 
 # Merge variable labels for readability
@@ -139,7 +139,7 @@ idx_elect <- grep(week_elect, estimates[[1]])
 
 # Extract fixed factors, random effects for key events, and save
 # data frame.
-idx <- c(rep(1:36), idx_cdc, idx_biden, idx_trump, idx_elect)
+idx <- c(rep(1:34), idx_cdc, idx_biden, idx_trump, idx_elect)
 estimates_rep <- estimates[idx, ]
 
 # Merge variable labels for readability
